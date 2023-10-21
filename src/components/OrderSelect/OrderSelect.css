@@ -1,0 +1,16 @@
+.order-select-container {
+    display: flex;
+    align-items: center;
+    margin-left: 6%;
+    margin-right: 20%;
+    margin-top: 20px;
+  }
+  
+  .order-select-label {
+    margin-right: auto;
+  }
+  
+  .order-select-dropdown {
+    margin-left: 132px;
+  }
+  

@@ -1,0 +1,28 @@
+.type-select-container {
+    display: flex;
+    align-items: center;
+    margin-left: 6%;
+    margin-right: 20%;
+    margin-top: 20px;
+  }
+  
+  .type-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .type-dropdown {
+    flex: 1;
+    margin-right: 20px;
+    margin-left: 40px;
+  }
+  
+  .type-checkbox {
+    flex: 0;
+    margin-right: 5px;
+  }
+  
+  .type-requirement-text {
+    flex: 1;
+  }
+  

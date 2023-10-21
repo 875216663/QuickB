@@ -1,0 +1,35 @@
+.choices-area-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 6%;
+    margin-right: 20%;
+    margin-top: 20px;
+  }
+  
+  .choices-label {
+    flex: 1;
+  }
+  
+  .choices-textarea {
+    flex: 2;
+    margin-right: 30px;
+    margin-left: 11%;
+    margin-top: 20px;
+    caret-color: transparent;
+    box-shadow: none;
+  }
+  
+  .choices-textarea-selected {
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  }
+  
+  .choices-button {
+    flex: 0;
+  }
+  
+  /* 变红色 */
+  .exceeding-characters {
+    color: red;
+  }
+  

@@ -1,0 +1,22 @@
+.default-value-container {
+    display: flex;
+    align-items: center;
+    margin-left: 6%;
+    margin-right: 20%;
+    margin-top: 20px;
+  }
+  
+  .default-value-label {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .default-value-textfield {
+    flex: 2;
+  }
+  
+  .default-value-textfield input {
+    height: 30px;
+  }
+  
+  

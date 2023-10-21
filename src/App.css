@@ -1,0 +1,39 @@
+.field-builder {
+  font-family: Arial, sans-serif;
+  width: 60%;
+  height: auto;
+  margin: 50px auto;
+  padding: 0 0  16px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;  /* 增加这个值以使边缘更加圆滑 */
+}
+
+/* 选中textarea使其变成手指 */
+textarea:hover {
+  cursor: pointer;
+}
+
+.field-builder select, 
+.field-builder input[type="text"], 
+.field-builder textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+
+.field-builder-title {
+  background-color: rgb(211, 235, 245);
+  color: rgb(33, 102, 136);
+  padding: 15px;
+  font-size: 16px; /* 设置字体大小 */
+  border-top-left-radius: 8px;  /* 设置左上角的圆滑度 */
+  border-top-right-radius: 8px;  /* 设置右上角的圆滑度 */
+}
+
+.field-builder .button-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
