@@ -7,7 +7,6 @@ function DefaultValueInput({ defaultValue, setDefaultValue, setChoices, choices 
     <div className="default-value-container">
       <span className="default-value-label">Default Value</span>
       <TextField
-        id="outlined-basic" 
         variant="outlined"
         className="default-value-textfield"  // Applied CSS class
         type="text"

@@ -13,14 +13,7 @@ textarea:hover {
   cursor: pointer;
 }
 
-.field-builder select, 
-.field-builder input[type="text"], 
-.field-builder textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  box-sizing: border-box;
-}
+
 
 
 .field-builder-title {

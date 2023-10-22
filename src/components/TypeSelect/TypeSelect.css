@@ -6,16 +6,25 @@
     margin-top: 20px;
   }
   
+
+
   .type-text {
     flex: 1;
-    text-align: left;
+    /* width: 100px; */
+  text-align: left;
   }
   
+  .right{
+    width: 100%;
+    flex: 2
+  }
+
   .type-dropdown {
     flex: 1;
-    margin-right: 20px;
-    margin-left: 40px;
+
+    height: 36px;
   }
+  
   
   .type-checkbox {
     flex: 0;

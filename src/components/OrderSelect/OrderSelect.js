@@ -6,8 +6,10 @@ function OrderSelect({ order, handleSort }) {
     <div className="order-select-container">
       <label className="order-select-label">Order</label>
       <select value={order} onChange={handleSort} className="order-select-dropdown">
-        <option>Display choices in Alphabetical</option>
+
         <option>Display choices in Time</option>
+        <option>Display choices in Alphabetical</option>
+        
       </select>
     </div>
   );

@@ -3,14 +3,17 @@
     align-items: center;
     margin-left: 6%;
     margin-right: 20%;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   
   .order-select-label {
-    margin-right: auto;
+    flex: 1;
+    text-align: left;
   }
-  
+
   .order-select-dropdown {
-    margin-left: 132px;
+    flex: 2;
+    height: 45px;
+    border-radius: 5px;  /* 添加圆滑的边框 */
+    border: 1px solid rgb(196, 196, 196);  /* 边框颜色设置为红色 */
   }
-  

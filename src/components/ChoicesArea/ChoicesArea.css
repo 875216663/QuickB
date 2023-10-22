@@ -11,21 +11,27 @@
     flex: 1;
   }
   
-  .choices-textarea {
+.rightPart{
     flex: 2;
-    margin-right: 30px;
-    margin-left: 11%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+  .choices-textarea {
+    flex: 7;
+    margin-right: 20px;
+    /* margin-left: 11%; */
+    width: 80%;
     margin-top: 20px;
     caret-color: transparent;
-    box-shadow: none;
+    
   }
   
-  .choices-textarea-selected {
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-  }
+ 
   
   .choices-button {
-    flex: 0;
+    flex: 1;
   }
   
   /* 变红色 */

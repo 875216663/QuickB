@@ -8,8 +8,7 @@ function LabelInput({ label, setLabel }) {
       <span className="label-text">Label</span>
       <TextField
         className="label-field"
-        id="outlined-basic"
-        label=""
+        label="Please enter a label"
         variant="outlined"
         value={label}
         onChange={(e) => setLabel(e.target.value)}

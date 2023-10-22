@@ -8,14 +8,16 @@
   
   .label-text {
     flex: 1;
-    text-align: left;
+    /* text-align: left; */
+    
   }
   
   .label-field {
     flex: 2;
+    width: 100%
   }
   
   .label-input {
-    height: 30px;
+    height: 40px;
   }
   
