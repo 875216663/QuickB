@@ -45,44 +45,53 @@ function App() {
   };
 
 
-  //处理提交
-  //The handleSubmit function is an asynchronous function that is triggered when the form is submitted.
   const handleSubmit = async (e) => {
-    e.preventDefault();  //阻止浏览器默认的表单提交行为。
-    setLoading(true); // Set loading to true before the request
-    const formData = {
-      label: label,
-      type: type,
-      isRequired: isRequired,
-      defaultValue: defaultValue,
-      choices: choices,
-      order: order,
-    };
-    console.log("Submitted Data:", formData);
-    try {
-      const response = await axios.post(
-        "http://www.mocky.io/v2/566061f21200008e3aabd919",
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
+    e.preventDefault();  //Block the browser's default form submission behavior.
+    if(defaultValue.length > 40){
+      alert("Default Value is over 40 characters!!!");
+      setLoading(false);
+    }else{
+      if (!label) {
+        alert("Please enter a label!!!");
+        setLoading(false);
+      }else{
+        setLoading(true); // Set loading to true before the request
+        const formData = {
+          label: label,
+          type: type,
+          isRequired: isRequired,
+          defaultValue: defaultValue,
+          choices: choices,
+          order: order,
+        };
+        console.log("Submitted Data:", formData);
+        try {
+          const response = await axios.post(
+            "http://www.mocky.io/v2/566061f21200008e3aabd919",
+            formData,
+            {
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          );
+          setTimeout(() => {
+            setLoading(false);
+            console.log("API Response:", response.data);
+            toast.success('Form submitted successfully!');
+          }, 3000);  
+      
+        } catch (error) {
+          setTimeout(() => {
+            setLoading(false);
+            console.error("Error submitting the form:", error);
+            toast.error('Error submitting the form.');
+          }, 2000);
         }
-      );
-      setTimeout(() => {
-        setLoading(false);
-        console.log("API Response:", response.data);
-        toast.success('Form submitted successfully!');
-      }, 3000);  // 3000 milliseconds, i.e., 3 seconds
-  
-    } catch (error) {
-      setTimeout(() => {
-        setLoading(false);
-        console.error("Error submitting the form:", error);
-        toast.error('Error submitting the form.');
-      }, 2000);  // 2000 milliseconds, i.e., 2 seconds
+      } 
     }
   };
+  
   
   //处理重置,清空表单
   const handleFormReset = (e) => {
@@ -90,7 +99,7 @@ function App() {
     setLabel("");
     setType("Multi-select");
     setIsRequired(false);
-    setDefaultValue("");
+    setDefaultValue("Asia");
     setChoices([]);
     setOrder("Display choices in Time");
     setSelectedLine(null);
@@ -101,7 +110,7 @@ function App() {
   return (
     <div>
       <ToastContainer />
-      <form className="field-builder" onSubmit={handleSubmit}>
+      <form noValidate className="field-builder" onSubmit={handleSubmit}>
         <h1 className="field-builder-title">Field Builder</h1>
         <LabelInput label={label} setLabel={setLabel} /> 
         <TypeSelect type={type} setType={setType} isRequired={isRequired} setIsRequired={setIsRequired} />

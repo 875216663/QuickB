@@ -21,9 +21,9 @@
   .choices-textarea {
     flex: 7;
     margin-right: 20px;
-    /* margin-left: 11%; */
     width: 80%;
     margin-top: 20px;
+    /*  Make the caret (the text cursor in input fields and text areas) transparent */
     caret-color: transparent;
     
   }
