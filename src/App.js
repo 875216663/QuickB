@@ -47,7 +47,7 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();  //Block the browser's default form submission behavior.
-    if(defaultValue.length > 40){
+    if(defaultValue.length > 4){
       alert("Default Value is over 40 characters!!!");
       setLoading(false);
     }else{

@@ -4,8 +4,6 @@ import './DefaultValueInput.css';  // Import the CSS file
 
 function DefaultValueInput({ defaultValue, setDefaultValue, setChoices, choices }) {
 
-
-
   return (
     <div className="default-value-container">
       <span className="default-value-label">Default Value</span>
@@ -19,19 +17,19 @@ function DefaultValueInput({ defaultValue, setDefaultValue, setChoices, choices 
           setDefaultValue(inputValue);
           
         }}
-        helperText={ defaultValue.length > 40 ? 'It is over 40 characters.' : ''}
+        helperText={ defaultValue.length > 4 ? 'It is over 4 characters.' : ''}
         onKeyDown={(e) => {
           if (e.key === "Enter") {
             e.preventDefault();
             const trimmedValue = defaultValue.trim();
 
             if (choices.length >= 5) {
-              alert("You cannot add more than 50 choices.");
+              alert("You cannot add more than 5 choices.");
               return;
             }
 
             if (trimmedValue !== "") {
-              if (!choices.map((each) => each.value).includes(trimmedValue)) {
+              if (!choices.map((each) => each.value.toLowerCase()).includes(trimmedValue.toLowerCase())) {
                 setChoices((prevChoices) => [
                   ...prevChoices,
                   { value: trimmedValue, time: new Date() },

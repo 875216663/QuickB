@@ -24,18 +24,11 @@
     width: 80%;
     margin-top: 20px;
     /*  Make the caret (the text cursor in input fields and text areas) transparent */
-    caret-color: transparent;
+    /* caret-color: transparent; */
     
   }
   
- 
-  
   .choices-button {
     flex: 1;
-  }
-  
-  /* 变红色 */
-  .exceeding-characters {
-    color: red;
   }
   
